@@ -1,5 +1,5 @@
 # Colourful Calculator
-lab exercise 3 - OOAD
+Lab Exercise 3 - OOAD
 
 ------------
 
