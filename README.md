@@ -21,11 +21,12 @@ Key point:
 - create a colourful calculator with mathematical operations
 - use Java Swing components
 
-Design Pattern:
-Reason:
+Design Pattern: 
+Reason: 
 
 Classes:
 - Main
+- Panel
 - Screen
 - Button:
     - 1
@@ -38,16 +39,22 @@ Classes:
     - 8
     - 9 
     - 0
+    - .
+    - 'C'
     - '+'
     - '-'
     - '/'
     - '*'
+    - '='
 
 Use Casses:
 - Click button
 - Mathematical Operation
 - Display screen
 
-
+MVC:
+Model: data / logical
+View: GUI
+Controller: interaction between View - Model
 
 
