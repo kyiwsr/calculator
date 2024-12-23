@@ -1,18 +1,14 @@
 //View: GUI
+import java.awt.Color;
+import java.awt.Font;
 import javax.swing.*;
 
 public class CalcView {
 
     JFrame frame;
-    private Button button;
     private Screen screen;
-    private String[] list = {"C","%","/","*","7","8","9","-","4","5","6","+","1","2","3","=","0","."};
-    public int positionX = 15;
-    public int positionY = 200;
-    public int width = 84;
-    public int height = 84;
-    public int space = 10;
-    public int k = 100;
+    private String[] buttonList = {"C","%","÷","x","7","8","9","-","4","5","6","+","1","2","3","=","0","."};
+    private int positionX = 15, positionY = 200, width = 84, height = 84, space = 10;
 
     public CalcView(){
 
@@ -30,18 +26,25 @@ public class CalcView {
         screen = new Screen();
         screen.screenAttributes();
         frame.add(screen.getscreen());
-        
-        for(int i = 0; i < list.length; i++)
-        {
-        
-            button = new Button();
-            button.buttonAttributes();
-            button.getButton().setText(list[i]);
 
-            if(list[i] == "="){
+        addButtons();
+        
+    }
+
+    private void addButtons(){
+        for(int i = 0; i < buttonList.length; i++)
+        {
+            Button button = new Button();
+            button.buttonAttributes();
+            button.getButton().setText(buttonList[i]);
+            button.getButton().setFont(new Font("Arial", Font.BOLD, 14));
+            button.getButton().setBackground(Color.LIGHT_GRAY);
+
+            if(buttonList[i].equals("=")){
                 button.getButton().setBounds(positionX,positionY,width,178);
+                positionX += 178 + space;
             }
-            else if (list[i] == "0" || list[i] == "." ) {
+            else if (buttonList[i].equals("0") || buttonList[i].equals(".") ) {
                 button.getButton().setBounds(positionX + 95,positionY,width,height);
             }
             else{
@@ -57,11 +60,5 @@ public class CalcView {
 
             frame.add(button.getButton());
         }
-       
-
-        
-
- 
-    }  
-        
+    }   
 }
