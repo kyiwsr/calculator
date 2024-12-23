@@ -18,10 +18,10 @@ Please indicate in your description which Design Pattern you used for this task.
 # Planning Process:
 Key point:
 - client is a Pre-School Principal
+- create a colourful calculator with mathematical operations
 - use Java Swing components
 
 Design Pattern:
-
 Reason:
 
 Classes:
@@ -45,8 +45,9 @@ Classes:
 
 Use Casses:
 - Click button
-- Display screen
 - Mathematical Operation
+- Display screen
+
 
 
 
