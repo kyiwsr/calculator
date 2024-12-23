@@ -10,8 +10,6 @@ public class Button {
 
     public void buttonAttributes()
     {
-        button.setBounds(150,200,100,100);
-        button.setText("symbol");
         button.setVisible(true);
     }
 
